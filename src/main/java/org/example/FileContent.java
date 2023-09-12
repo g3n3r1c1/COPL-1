@@ -26,3 +26,10 @@ public class FileContent {
         return rawText.toString();
     }
 }
+
+/*
+public class name{
+
+name()
+}
+*/
