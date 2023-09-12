@@ -22,4 +22,25 @@ public class TokenFinder {
         }
         return tokenSet;
     }
+
+    public static void determineToken(String Token){
+        char x = Token.charAt(0);
+        System.out.print(" : ");
+            if((x > 64 && x < 91) || (x > 96 && x < 123)) {
+                System.out.println("var name");
+            }
+            else if(x == ':'){
+                if(Token.equals("::=")){
+                    System.out.println("variable definition");
+                }
+                else{
+                    System.out.println("invalid symbol.");
+                }
+            }
+            else if(x >= 48 || x <= 57){
+                System.out.println("it's an expression");
+            }
+            else
+                System.out.println("Not known yet.");
+    }
 }
